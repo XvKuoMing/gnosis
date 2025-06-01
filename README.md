@@ -49,12 +49,20 @@ Transform natural language into structured function calls using custom grammars.
 
 **Step 1: Define the Grammar using Lark syntax**
 ```lark
-start: function_call
-function_call: FUNCTION_NAME argument*
-argument: "$" ARGUMENT_NAME ARGUMENT_VALUE
-FUNCTION_NAME: "sum_of_multiples" | "product_of_primes"
-ARGUMENT_NAME: "lower_limit" | "upper_limit" | "multiples" | "count"
-ARGUMENT_VALUE: /\d+/
+start: tools
+
+tools: "[" tool+ "]"
+
+tool: "{" "\"name\"" ":" "\"" FUNCTION_NAME "\"" "," "\"arguments\"" ":" arguments "}"
+
+arguments: "{" argument ("," argument)* "}"
+argument: "\"" ARGUMENT_NAME "\"" ":" ARGUMENT_VALUE
+
+
+FUNCTION_NAME.3: "sum_of_multiples" | "product_of_primes"
+ARGUMENT_NAME.2: "lower_limit" | "upper_limit" | "multiples" | "count"
+ARGUMENT_VALUE.1: /\d+/
+
 %import common.WS
 %ignore WS
 ```
@@ -64,12 +72,20 @@ ARGUMENT_VALUE: /\d+/
 from rebuilder import Rebuilder
 
 grammar = """
-start: function_call
-function_call: FUNCTION_NAME argument*
-argument: "$" ARGUMENT_NAME ARGUMENT_VALUE
-FUNCTION_NAME: "sum_of_multiples" | "product_of_primes"
-ARGUMENT_NAME: "lower_limit" | "upper_limit" | "multiples" | "count"
-ARGUMENT_VALUE: /\d+/
+start: tools
+
+tools: "[" tool+ "]"
+
+tool: "{" "\"name\"" ":" "\"" FUNCTION_NAME "\"" "," "\"arguments\"" ":" arguments "}"
+
+arguments: "{" argument ("," argument)* "}"
+argument: "\"" ARGUMENT_NAME "\"" ":" ARGUMENT_VALUE
+
+
+FUNCTION_NAME.3: "sum_of_multiples" | "product_of_primes"
+ARGUMENT_NAME.2: "lower_limit" | "upper_limit" | "multiples" | "count"
+ARGUMENT_VALUE.1: /\d+/
+
 %import common.WS
 %ignore WS
 """
