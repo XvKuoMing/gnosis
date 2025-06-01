@@ -1,0 +1,12 @@
+"Run","Run ID","metric","step","timestamp","value"
+"Qwen4B-Grammar-RL-CLS","f8891729f98643938041fc199550de8f","rewards/tool_accuracy_reward/mean","15","1748596388441","0.35"
+"Qwen4B-Grammar-RL-CLS","f8891729f98643938041fc199550de8f","rewards/tool_accuracy_reward/mean","30","1748596771935","0.5"
+"Qwen4B-Grammar-RL-CLS","f8891729f98643938041fc199550de8f","rewards/tool_accuracy_reward/mean","45","1748597170711","0.5166666666666667"
+"Qwen4B-Grammar-RL-CLS","f8891729f98643938041fc199550de8f","rewards/tool_accuracy_reward/mean","60","1748597620541","0.4166666666666667"
+"Qwen4B-Grammar-RL-CLS","f8891729f98643938041fc199550de8f","rewards/tool_accuracy_reward/mean","75","1748598067240","0.5333333333333333"
+"Qwen4B-Grammar-RL-CLS","f8891729f98643938041fc199550de8f","rewards/tool_accuracy_reward/mean","90","1748598455841","0.3333333333333333"
+"Qwen4B-Grammar-RL-CLS","f8891729f98643938041fc199550de8f","rewards/tool_accuracy_reward/mean","105","1748598869780","0.3333333333333333"
+"Qwen4B-Grammar-RL-CLS","f8891729f98643938041fc199550de8f","rewards/tool_accuracy_reward/mean","120","1748599219181","0.5166666666666667"
+"Qwen4B-Grammar-RL-CLS","f8891729f98643938041fc199550de8f","rewards/tool_accuracy_reward/mean","135","1748599666113","0.48333333333333334"
+"Qwen4B-Grammar-RL-CLS","f8891729f98643938041fc199550de8f","rewards/tool_accuracy_reward/mean","150","1748600042308","0.6833333333333333"
+
